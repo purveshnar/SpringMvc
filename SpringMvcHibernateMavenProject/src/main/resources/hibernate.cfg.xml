@@ -14,11 +14,14 @@
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">timepass</property>
 		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">create</property>
 
 		<!-- Specifying Session Context -->
 		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
 
 		<!-- Mapping With Model Class Containing Annotations -->
 		<mapping class="com.jcg.hibernate.maven.User" />
+		<mapping class="com.jcg.hibernate.maven.savepersist.Employee" />
+		<mapping class="com.jcg.hibernate.maven.savepersist.Address" />
 	</session-factory>
 </hibernate-configuration>

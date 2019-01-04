@@ -9,8 +9,6 @@ import java.util.Scanner;
  */
 public class WaitNotifyExample {
 
-	public class Processor {
-
 	    public void produce() throws InterruptedException {
 	        synchronized (this) {
 	            System.out.println("Producer thread running ....");
@@ -32,5 +30,4 @@ public class WaitNotifyExample {
 	            Thread.sleep(5000);
 	        }
 	    }
-	}
 }

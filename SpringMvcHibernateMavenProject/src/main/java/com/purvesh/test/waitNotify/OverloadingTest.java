@@ -7,9 +7,9 @@ public class OverloadingTest {
 		System.out.println("Object");
 	}
 	
-	public static void display(String str) {
-		System.out.println("String.display()");
-	}
+//	public static void display(String str) {
+//		System.out.println("String.display()");
+//	}
 
 	public static void display(Integer str) {
 		System.out.println("Integer.display()");
@@ -17,6 +17,6 @@ public class OverloadingTest {
 	
 	
 	public static void main(String[] args) {
-		display(null);
+		display(null); // expected compilation error
 	}
 }

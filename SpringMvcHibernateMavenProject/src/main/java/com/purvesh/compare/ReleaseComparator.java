@@ -1,4 +1,4 @@
-package com.purvesh.test;
+package com.purvesh.compare;
 
 import java.util.Comparator;
 

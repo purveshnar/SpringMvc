@@ -1,7 +1,8 @@
-package com.purvesh.test;
+package com.purvesh.compare;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ComparisonTest {
@@ -24,6 +25,10 @@ public class ComparisonTest {
 		
 		ReleaseComparator releaseComparator = new ReleaseComparator();
 		Collections.sort(movieList, releaseComparator);
+		System.out.println(movieList);
+		
+		System.out.println("Java 8");
+		Collections.sort(movieList, Comparator.comparing(Movie::getReleaseYear).thenComparing(Movie::getReleaseYear).reversed());
 		System.out.println(movieList);
 		
 	}

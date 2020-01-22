@@ -42,13 +42,13 @@ class ThreadSafeSingleton{
 //double checked locking singleton
 class DoubleCheckSingleton{
 	
-	private static volatile DoubleCheckSingleton obj;
+	private static volatile DoubleCheckSingleton obj; //*IMP volatile keyword
 	
 	private DoubleCheckSingleton() {}
 	
 	public static  DoubleCheckSingleton getInstance(){
 		if(obj== null) {
-			synchronized(DoubleCheckSingleton.class){ //**IMP
+			synchronized(DoubleCheckSingleton.class){ //**IMP : // dont use instance because static
 				if(obj==null){
 					obj = new DoubleCheckSingleton();
 				}
